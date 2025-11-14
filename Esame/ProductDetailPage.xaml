@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="Esame.ProductDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Dettagli Prodotto">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Image Source="{Binding Image}"
+                   HeightRequest="300"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <Label Text="{Binding Title}"
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   HorizontalOptions="Center" />
+
+            <Label Text="{Binding Price, StringFormat='Prezzo: €{0:F2}'}"
+                   FontSize="20"
+                   TextColor="Green"
+                   HorizontalOptions="Center" />
+
+            <Label Text="{Binding Description}"
+                   FontSize="16"
+                   LineBreakMode="WordWrap" />
+
+            <Button Text="Aggiungi al carrello"
+        Clicked="OnAddToCartClicked"
+        BackgroundColor="#4CAF50"
+        TextColor="White"
+        CornerRadius="10"
+        Padding="10"
+        Margin="20,30"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
